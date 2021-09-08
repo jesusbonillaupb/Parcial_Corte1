@@ -1,7 +1,7 @@
 ﻿
 namespace Parcial_Corte1
 {
-    partial class empleado
+    partial class empleados
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Parcial_Corte1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(empleado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(empleados));
             this.lblTituloempleados = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,19 +39,22 @@ namespace Parcial_Corte1
             this.label3 = new System.Windows.Forms.Label();
             this.numPanesNA = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button3 = new System.Windows.Forms.Button();
+            this.numPanesE = new System.Windows.Forms.NumericUpDown();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbDatos = new System.Windows.Forms.RichTextBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.radPm = new System.Windows.Forms.RadioButton();
+            this.txtHora = new System.Windows.Forms.TextBox();
+            this.radAm = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numPanesAL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPanesNA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPanesE)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloempleados
@@ -133,26 +136,28 @@ namespace Parcial_Corte1
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(24, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 20);
+            this.label4.Size = new System.Drawing.Size(204, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "-panes no aliñeados(500c/u)";
+            this.label4.Text = "-panes especiales(2000c/u)";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // numericUpDown1
+            // numPanesE
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(28, 251);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 10;
+            this.numPanesE.Location = new System.Drawing.Point(39, 239);
+            this.numPanesE.Name = "numPanesE";
+            this.numPanesE.Size = new System.Drawing.Size(120, 20);
+            this.numPanesE.TabIndex = 10;
+            this.numPanesE.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // button3
+            // btnGuardar
             // 
-            this.button3.Location = new System.Drawing.Point(488, 405);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 40);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "vender producto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(488, 405);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(89, 40);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Text = "vender producto";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label5
             // 
@@ -191,20 +196,12 @@ namespace Parcial_Corte1
             this.label7.TabIndex = 16;
             this.label7.Text = "cedula";
             // 
-            // textBox1
+            // txtCedula
             // 
-            this.textBox1.Location = new System.Drawing.Point(542, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(542, 206);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(100, 20);
-            this.txtHora.TabIndex = 20;
-            this.txtHora.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtCedula.Location = new System.Drawing.Point(542, 152);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(100, 20);
+            this.txtCedula.TabIndex = 18;
             // 
             // label8
             // 
@@ -217,30 +214,74 @@ namespace Parcial_Corte1
             this.label8.Text = "hora";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // richTextBox1
+            // rtbDatos
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(77, 286);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(581, 113);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
+            this.rtbDatos.Location = new System.Drawing.Point(61, 286);
+            this.rtbDatos.Name = "rtbDatos";
+            this.rtbDatos.Size = new System.Drawing.Size(581, 113);
+            this.rtbDatos.TabIndex = 21;
+            this.rtbDatos.Text = "";
+            this.rtbDatos.TextChanged += new System.EventHandler(this.rtbDatos_TextChanged);
             // 
-            // empleado
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(310, 414);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(115, 31);
+            this.btnBorrar.TabIndex = 22;
+            this.btnBorrar.Text = "borrar datos";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // radPm
+            // 
+            this.radPm.AutoSize = true;
+            this.radPm.Location = new System.Drawing.Point(600, 239);
+            this.radPm.Name = "radPm";
+            this.radPm.Size = new System.Drawing.Size(41, 17);
+            this.radPm.TabIndex = 23;
+            this.radPm.TabStop = true;
+            this.radPm.Text = "PM";
+            this.radPm.UseVisualStyleBackColor = true;
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(542, 206);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(100, 20);
+            this.txtHora.TabIndex = 20;
+            this.txtHora.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // radAm
+            // 
+            this.radAm.AutoSize = true;
+            this.radAm.Location = new System.Drawing.Point(488, 239);
+            this.radAm.Name = "radAm";
+            this.radAm.Size = new System.Drawing.Size(41, 17);
+            this.radAm.TabIndex = 24;
+            this.radAm.TabStop = true;
+            this.radAm.Text = "AM";
+            this.radAm.UseVisualStyleBackColor = true;
+            // 
+            // empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(761, 457);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.radAm);
+            this.Controls.Add(this.radPm);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.rtbDatos);
             this.Controls.Add(this.txtHora);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.numPanesE);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numPanesNA);
             this.Controls.Add(this.label3);
@@ -250,12 +291,12 @@ namespace Parcial_Corte1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblTituloempleados);
-            this.Name = "empleado";
+            this.Name = "empleados";
             this.Text = "empleados";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPanesAL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPanesNA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPanesE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,15 +312,18 @@ namespace Parcial_Corte1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numPanesNA;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.NumericUpDown numPanesE;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbDatos;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.RadioButton radPm;
+        private System.Windows.Forms.TextBox txtHora;
+        private System.Windows.Forms.RadioButton radAm;
     }
 }

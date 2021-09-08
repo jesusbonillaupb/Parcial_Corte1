@@ -42,7 +42,7 @@ namespace Parcial_Corte1
             {
                 if (this.txtUsuario.Text == "empleado" && this.txtContraseña.Text == "empleado2021")
                 {
-                    empleado emp = new empleado();
+                    empleados emp = new empleados();
                     emp.Show();
                     this.Hide();
                 }
