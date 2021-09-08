@@ -40,7 +40,16 @@ namespace Parcial_Corte1
 
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta, revise si estan bien escritos");
+                if (this.txtUsuario.Text == "empleado" && this.txtContraseña.Text == "empleado2021")
+                {
+                    empleado emp = new empleado();
+                    emp.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta, vuelva a intentar");
+                }
             }
 
             txtUsuario.Clear();
